@@ -11,21 +11,29 @@
 		</div>
     <script>
 			function sumCalculator() {
-      //display an alert to user welcoming them to the calculator
-      alert("Welcome to my calculator!");
+        //display an alert to user welcoming them to the calculator
+        alert("Welcome to my calculator!");
+  			
+        //prompt user for name and use in welcome alert
+        var user_name = prompt("What is your name?");
+        alert("Welcome " + user_name + "!");
 			
-      //prompt user for name and use in welcome alert
-      var user_name = prompt("What is your name?");
-      alert("Welcome " + user_name + "!");
-			
-      //Continue until user indicates that they no longer want to add numbers
-      go_again = true;
-      while (go_again == true) {
+        //Continue until user indicates that they no longer want to add numbers
+        go_again = true;
+        while (go_again == true) {
 			
         //Prompt user for 2 numbers with a space separator. Split the input by space and save them as var
         var user_num = prompt("Please enter two numbers separated by a space: ");
         num_one = user_num.split(" ")[0],
         num_two = user_num.split(" ")[1];
+				
+				//call check_input to verify the user inputs are both numbers
+				var valid = check_input(num_one, num_two);
+				
+				//if input is not valid, skip rest of processing and go back to beginning of loop
+				if (valid == false) {
+						continue;
+				}				
 				
         //call add to add the user numbers together, use parseInt to cast them as integers
         sum = add(parseInt(num_one), parseInt(num_two));
@@ -51,13 +59,28 @@
         } //end if
       } //end while
 			}//end main fn
+			
+			function check_input(x, y) {
+    			//define regular expression for numbers
+          var regex = /^[0-9]+$/;
+					//if either input is not a number, print alert and return false
+          if ((!x.match(regex)) || (!y.match(regex))) {
+							alert("You did not enter numbers.");
+							return false;
+					}
+					//return true if both inputs are numbers
+					else {
+							return true;
+					} //end if
+					
+			}//end check_input
       function add(x, y) {
         //add the two input numbers together and print an alert with the result
         z = x + y;
         alert("The sum of your two numbers is: " + z);
         //return the sum 
         return z;
-      }//end sub fn
+      }//end add
     </script>
   </body>
 </html>
