@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+		<link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+		<h1>Sum Calculator</h1>
+		<div class="button">
+      		<button onclick="sumCalculator()">Start Calculator</button>
+		</div>
+    <script>
+			function sumCalculator() {
+      //display an alert to user welcoming them to the calculator
+      alert("Welcome to my calculator!");
+			
+      //prompt user for name and use in welcome alert
+      var user_name = prompt("What is your name?");
+      alert("Welcome " + user_name + "!");
+			
+      //Continue until user indicates that they no longer want to add numbers
+      go_again = true;
+      while (go_again == true) {
+			
+        //Prompt user for 2 numbers with a space separator. Split the input by space and save them as var
+        var user_num = prompt("Please enter two numbers separated by a space: ");
+        num_one = user_num.split(" ")[0],
+        num_two = user_num.split(" ")[1];
+				
+        //call add to add the user numbers together, use parseInt to cast them as integers
+        sum = add(parseInt(num_one), parseInt(num_two));
+				
+        //alert user whether their sum is over or under 10
+        if (sum > 10) {
+          alert("That is a big number.");
+        } else {
+          alert("That is a small number.");
+        } //end if
+				
+        //ask user whether they would like to continue 
+        user_ans = prompt("Would you like to add two more numbers? (yes or no): ");
+				
+        //continue back to top of while statement
+        if (user_ans == "yes") {
+          continue;
+        }
+        //else, thank user and exit while statement
+        else {
+          alert("Thank you for using the calculator!");
+          go_again = false;
+        } //end if
+      } //end while
+			}//end main fn
+      function add(x, y) {
+        //add the two input numbers together and print an alert with the result
+        z = x + y;
+        alert("The sum of your two numbers is: " + z);
+        //return the sum 
+        return z;
+      }//end sub fn
+    </script>
+  </body>
+</html>
