@@ -4,19 +4,21 @@
 <title>Forms</title>
 <meta charset="UTF-8">
 <script src="validate.js"></script>
+<link href="formstyles.css" rel="stylesheet">
 
 </head>
 
 <body>
  <form name="Assignment 4 Form" method="post" action="https://cs601.bu-course-examples.com/hw4/380a98f5-5191-496f-8aa1-7acc1da83cc5" novalidate onsubmit="return validateForm();">
+
  <label for="firstName">Enter your first name:</label>
   <input type="text" name="firstName" id="firstName" required> <br>
 
 	<label for="lastName">Enter your last name:</label>
   <input type="text" name="lastName" id="lastName" required> <br>
-
+ 
 	<label for="facilitator">Enter your facilitator's first name:</label>
-  <input type="text" name="facilitator" id="facilitator" required> <br>
+  <input type="text" name="facilitator" id="facilitator" required> <br><br>
 
 	<label for="radioMessageType">What is your favorite social media platform?</label> <br>
 	 <input type="radio" name="radioMessageType" id="radioMessageType"
@@ -26,7 +28,7 @@
  <input type="radio" name="radioMessageType"
  value="reddit">Reddit <br>
   <input type="radio" name="radioMessageType"
- value="facebook">Facebook <br>
+ value="facebook">Facebook <br> <br>
 
  <fieldset>
 <legend> What type of emails would you like to receive?</legend>

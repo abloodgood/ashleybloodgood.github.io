@@ -1,0 +1,19 @@
+input[type=text] {
+  width: 25%;
+  padding: 10px 15px;
+  margin: 8px 0;
+	border-radius:10px;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus {
+  border: 3px solid gray;
+}
+
+body {
+		padding: 5px;
+		margin: 8px 0;
+		background-color: #efe4f2;
+		font-family: arial, sans-serif;
+
+}
