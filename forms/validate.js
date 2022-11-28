@@ -22,7 +22,7 @@ function validateForm() {
 		}
 		
 		/*check that facilatator exists*/
-		var facName = document.getElementById("facilitatorName");
+		var facName = document.getElementById("facilitator");
 		var names = ["Jen", "Behdad", "Chris", "Christian", "Josh", "jen", "behdad", "chris", "christian", "josh"];
 		/*if the string exists in names, return true*/
 		if (names.indexOf(facName.value) > -1) {
