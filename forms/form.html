@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Forms</title>
 <meta charset="UTF-8">
@@ -8,8 +8,8 @@
 </head>
 
 <body>
- <form name="Assignment 4 Form" action=https://cs601.bu-courseexamples.com/hw4/380a98f5-5191-496f-8aa1-7acc1da83cc5
- method="post" nonvalidate onsubmit="return validateForm();">
+ <form name="Assignment 4 Form"
+ action="https://cs601.bu-courseexamples.com/hw4/380a98f5-5191-496f-8aa1-7acc1da83cc5" method="post" onsubmit="return validateForm()">
  <label for="firstName">Enter your first name:</label>
   <input type="text" name="firstName" id="firstName" required> <br>
 
@@ -20,7 +20,7 @@
   <input type="text" name="facilitatorName" id="facilitatorName" required> <br>
 
 	<label for="radioMessageType">What is your favorite social media platform?</label> <br>
-	 <input type="radio" name="radioMessageType"
+	 <input type="radio" name="radioMessageType" id="radioMessageType"
  value="twitter" checked>Twitter <br>
  <input type="radio" name="radioMessageType"
  value="tiktok">TikTok <br>
@@ -31,15 +31,15 @@
 
  <fieldset>
 <legend> What type of emails would you like to receive?</legend>
-  <input type="checkbox" name="type1"
+  <input type="checkbox" id="type1"
  value="news"><label for="type1">Upcoming News</label><br>
- <input type="checkbox" name="type2"
+ <input type="checkbox" id="type2"
  value="sale"><label for="type2">Sales</label> <br>
- <input type="checkbox" name="type3"
+ <input type="checkbox" id="type3"
  value="coupon"><label for="type3">New Coupons</label> <br>
 </fieldset>
-
-  <input type="submit" names="submitButton" value="Submit">
+<p>
+  <input type="submit" name="submitButton" value="Submit">
  </p>
  </form>
 </body>
